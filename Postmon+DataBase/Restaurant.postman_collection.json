@@ -1,0 +1,2418 @@
+{
+	"info": {
+		"_postman_id": "5f57c886-ff0e-4421-aa62-2daeaa8650c6",
+		"name": "Restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27922333"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "reem",
+											"description": "required|string",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"description": "required|min:8",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "09661385149",
+											"description": "required|min:10|unique",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/register",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "reem",
+													"description": "required|string",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123456789",
+													"description": "required|min:8",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "09661385149",
+													"description": "required|min:10|unique",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{path}}/register",
+											"host": [
+												"{{path}}"
+											],
+											"path": [
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:08:24 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:08:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"user\": {\n            \"uuid\": \"bb96eb06-d7b2-490e-a0ce-a735a664e59e\",\n            \"name\": \"reem\",\n            \"phone\": \"09661385149\",\n            \"created_at\": \"2023-08-26 10:08:24\",\n            \"updated_at\": \"2023-08-26 10:08:24\"\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+								},
+								{
+									"name": "register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "reem Geourges",
+													"description": "required|string",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123456789",
+													"description": "required|min:8",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "096613851490",
+													"description": "required|min:10|unique",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{path}}/register",
+											"host": [
+												"{{path}}"
+											],
+											"path": [
+												"register"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:11:36 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:11:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"status\": false,\n    \"error\": \"The phone has already been taken.\",\n    \"statusCode\": 400\n}"
+								}
+							]
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "09661385149",
+											"description": "required|min:10|unique",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"description": "required|min:8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/login",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone",
+													"value": "09661385149",
+													"description": "required|min:10|unique",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123456789",
+													"description": "required|min:8",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{path}}/login",
+											"host": [
+												"{{path}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:12:06 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:12:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "57"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"user\": {\n            \"uuid\": \"bb96eb06-d7b2-490e-a0ce-a735a664e59e\",\n            \"name\": \"reem\",\n            \"phone\": \"09661385149\",\n            \"created_at\": \"2023-08-26 10:08:24\",\n            \"updated_at\": \"2023-08-26 10:08:24\"\n        },\n        \"token\": \"1|laravel_sanctum_I7I4DspJPZeQBPG1RY4pwfLl6AIVEbmLziEjPKrad38a3814\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+								},
+								{
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone",
+													"value": "09661385149",
+													"description": "required|min:10|unique",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "1234567890",
+													"description": "required|min:8",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{path}}/login",
+											"host": [
+												"{{path}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:12:40 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:12:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"status\": false,\n    \"error\": \"Invalid phone password.\",\n    \"statusCode\": 401\n}"
+								}
+							]
+						},
+						{
+							"name": "logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|laravel_sanctum_JqWSxKKGNitxILdMHwO8rriYeoCFLd1PJK2ne0Ln0da04b06",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/logout",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "logout",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{path}}/logout",
+											"host": [
+												"{{path}}"
+											],
+											"path": [
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:15:21 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:15:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+								},
+								{
+									"name": "logout",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{path}}/logout",
+											"host": [
+												"{{path}}"
+											],
+											"path": [
+												"logout"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:16:08 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 26 Aug 2023 10:16:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"status\": false,\n    \"error\": \"Unauthorize\",\n    \"statusCode\": 401\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "all-order-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/user-allOrder",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"user-allOrder"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all-order-user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/user-allOrder",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"user-allOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:55:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:55:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"orders\": [\n            {\n                \"uuid\": \"86612279-86fc-4164-b7f0-5d721fb489b9\",\n                \"status\": \"Not Received\",\n                \"total\": 125000,\n                \"items\": [\n                    {\n                        \"quantity\": 10,\n                        \"menu\": {\n                            \"uuid\": \"2332a963-be32-4804-9cf4-2a072167777c\",\n                            \"price\": 12500,\n                            \"item\": {\n                                \"name-item\": \"crispy\",\n                                \"desc\": \"Contains shish and sauce\",\n                                \"attachment\": \"Tomato Sauce\",\n                                \"type\": \"sandwish\"\n                            }\n                        }\n                    }\n                ],\n                \"created_at\": \"2023-08-26 11:27:19\",\n                \"updated_at\": \"2023-08-26 11:27:19\"\n            },\n            {\n                \"uuid\": \"eb2eb855-d095-4d80-86a1-3f118642cb76\",\n                \"status\": \"Not Received\",\n                \"total\": 96000,\n                \"items\": [\n                    {\n                        \"quantity\": 8,\n                        \"menu\": {\n                            \"uuid\": \"2332a963-be32-4804-9cf4-2a072167798c\",\n                            \"price\": 12000,\n                            \"item\": {\n                                \"name-item\": \"crispy\",\n                                \"desc\": \"Contains shish and sauce\",\n                                \"attachment\": \"Tomato Sauce\",\n                                \"type\": \"sandwish\"\n                            }\n                        }\n                    }\n                ],\n                \"created_at\": \"2023-08-26 11:39:40\",\n                \"updated_at\": \"2023-08-26 11:39:40\"\n            }\n        ]\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "all-order-user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/user-allOrder",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"user-allOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:59:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:59:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"orders\": [\n            {\n                \"uuid\": \"86612279-86fc-4164-b7f0-5d721fb489b9\",\n                \"status\": \"Not Received\",\n                \"total\": 125000,\n                \"items\": [\n                    {\n                        \"quantity\": 10,\n                        \"menu\": {\n                            \"uuid\": \"2332a963-be32-4804-9cf4-2a072167777c\",\n                            \"price\": 12500,\n                            \"item\": {\n                                \"name-item\": \"crispy\",\n                                \"desc\": \"Contains shish and sauce\",\n                                \"attachment\": \"Tomato Sauce\",\n                                \"type\": \"sandwish\"\n                            }\n                        }\n                    }\n                ],\n                \"created_at\": \"2023-08-26 11:27:19\",\n                \"updated_at\": \"2023-08-26 11:27:19\"\n            },\n            {\n                \"uuid\": \"eb2eb855-d095-4d80-86a1-3f118642cb76\",\n                \"status\": \"Received\",\n                \"total\": 96000,\n                \"items\": [\n                    {\n                        \"quantity\": 8,\n                        \"menu\": {\n                            \"uuid\": \"2332a963-be32-4804-9cf4-2a072167798c\",\n                            \"price\": 12000,\n                            \"item\": {\n                                \"name-item\": \"crispy\",\n                                \"desc\": \"Contains shish and sauce\",\n                                \"attachment\": \"Tomato Sauce\",\n                                \"type\": \"sandwish\"\n                            }\n                        }\n                    }\n                ],\n                \"created_at\": \"2023-08-26 11:39:40\",\n                \"updated_at\": \"2023-08-26 11:58:20\"\n            }\n        ]\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "showAllRestourant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/restaurants",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "showAllRestourant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/restaurants",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"restaurants"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:10:12 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:10:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"restaurants\": [\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5882a\",\n                \"name\": \"paino\",\n                \"cuisine_type\": \"east\",\n                \"address\": \"homs-hamra\",\n                \"contact\": {\n                    \"email\": \"piano@gamil.com\",\n                    \"phone\": \"0966135822\"\n                },\n                \"average_reviews\": 2.6666666666666665,\n                \"created_at\": \"2023-08-26 13:28:15\",\n                \"updated_at\": \"2023-08-26 13:28:15\"\n            },\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5884n\",\n                \"name\": \"Bordo\",\n                \"cuisine_type\": \"west\",\n                \"address\": \"homs-alhdara\",\n                \"contact\": {\n                    \"email\": \"piano@gamil.com\",\n                    \"phone\": \"0966135822\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 13:28:15\",\n                \"updated_at\": \"2023-08-26 13:28:15\"\n            },\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5881d\",\n                \"name\": \"Jacobs Inc\",\n                \"cuisine_type\": \"veritatis\",\n                \"address\": \"977 Hoeger Ville Suite 355\\nNew Jamesonstad, CO 30185\",\n                \"contact\": {\n                    \"email\": \"ritchie.arjun@example.org\",\n                    \"phone\": \"+1.515.600.7768\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"cb8d5a69-41e3-42ca-b879-ae8a18efef41\",\n                \"name\": \"Morissette Inc\",\n                \"cuisine_type\": \"dolor\",\n                \"address\": \"8277 Thompson Dam Suite 403\\nEast Ezraberg, NJ 30234-8297\",\n                \"contact\": {\n                    \"email\": \"quigley.lester@example.org\",\n                    \"phone\": \"(863) 569-1723\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"3fc27edb-a504-432f-85a8-2e13fd40a29a\",\n                \"name\": \"Schumm, Oberbrunner and Gibson\",\n                \"cuisine_type\": \"ipsam\",\n                \"address\": \"6500 Avis Loop Apt. 307\\nLake Etha, UT 24042\",\n                \"contact\": {\n                    \"email\": \"ledner.carissa@example.org\",\n                    \"phone\": \"+1-440-928-6552\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"5ea67e74-9e22-48ac-aa5e-9e6e32cea61f\",\n                \"name\": \"Von LLC\",\n                \"cuisine_type\": \"ut\",\n                \"address\": \"6502 Minerva Park Suite 525\\nWest Dawsonborough, OK 67435-7663\",\n                \"contact\": {\n                    \"email\": \"dprice@example.com\",\n                    \"phone\": \"1-458-697-1426\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"f726ad56-6b5e-480a-ba66-47fe49525fb0\",\n                \"name\": \"Sporer-Runolfsson\",\n                \"cuisine_type\": \"quia\",\n                \"address\": \"449 Lonzo Island\\nRoscoemouth, IL 68754\",\n                \"contact\": {\n                    \"email\": \"kallie.shanahan@example.com\",\n                    \"phone\": \"864.817.3862\"\n                },\n                \"average_reviews\": 4,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"59827eaf-8e6b-4707-a784-1b12825df45e\",\n                \"name\": \"Conn, Rogahn and Schmidt\",\n                \"cuisine_type\": \"dolorum\",\n                \"address\": \"93637 Yvette Streets Apt. 203\\nAufderharfort, WA 24390-0231\",\n                \"contact\": {\n                    \"email\": \"danyka.dietrich@example.net\",\n                    \"phone\": \"(463) 227-8042\"\n                },\n                \"average_reviews\": 3,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"46810f17-ed0b-4c84-bda2-2dd259bf6131\",\n                \"name\": \"Runolfsson, Bode and Vandervort\",\n                \"cuisine_type\": \"at\",\n                \"address\": \"309 Ortiz Bypass\\nKayleighfort, OR 33537-9321\",\n                \"contact\": {\n                    \"email\": \"bruen.krystel@example.net\",\n                    \"phone\": \"+1.959.929.0101\"\n                },\n                \"average_reviews\": 3,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"65c646ca-38a2-4d62-b9d4-a25ee179fb80\",\n                \"name\": \"Stracke Group\",\n                \"cuisine_type\": \"quo\",\n                \"address\": \"880 Oran Summit\\nLonniehaven, WY 29959\",\n                \"contact\": {\n                    \"email\": \"larue.stehr@example.org\",\n                    \"phone\": \"+1-551-409-3001\"\n                },\n                \"average_reviews\": 2.5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"1c3bd13a-b4fe-4fcc-9a80-df09754cea2f\",\n                \"name\": \"Satterfield and Sons\",\n                \"cuisine_type\": \"dolore\",\n                \"address\": \"297 Laurence Drive\\nEast Lydia, VT 60968\",\n                \"contact\": {\n                    \"email\": \"ahudson@example.org\",\n                    \"phone\": \"+1 (662) 919-4552\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"3ca8a464-ca00-48bc-b4d2-8ec8c6f124dc\",\n                \"name\": \"Schiller, Borer and Kunze\",\n                \"cuisine_type\": \"iste\",\n                \"address\": \"884 White Locks Apt. 837\\nWest Candelario, NY 43359-7412\",\n                \"contact\": {\n                    \"email\": \"fabiola.weissnat@example.com\",\n                    \"phone\": \"1-260-493-4743\"\n                },\n                \"average_reviews\": 1,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"19651d84-87cf-4694-83db-155363fdc7a3\",\n                \"name\": \"Welch, Moen and Wintheiser\",\n                \"cuisine_type\": \"fuga\",\n                \"address\": \"53891 Paucek Trace\\nHammesmouth, IL 87673\",\n                \"contact\": {\n                    \"email\": \"tdavis@example.com\",\n                    \"phone\": \"302.218.7767\"\n                },\n                \"average_reviews\": 4,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"c179e6d1-110b-4cb1-81f1-38c01cb216b1\",\n                \"name\": \"Sipes-Stark\",\n                \"cuisine_type\": \"et\",\n                \"address\": \"7221 Zieme Ridges\\nPort Sonya, CA 41395\",\n                \"contact\": {\n                    \"email\": \"lwolf@example.net\",\n                    \"phone\": \"1-929-318-6242\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"28491183-6ab0-4429-810b-c6249e935fba\",\n                \"name\": \"Anderson Ltd\",\n                \"cuisine_type\": \"repellat\",\n                \"address\": \"3796 Connor Springs\\nWelchside, TN 43654-6925\",\n                \"contact\": {\n                    \"email\": \"wanda94@example.com\",\n                    \"phone\": \"(909) 376-4145\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"96385af7-5ad7-45b3-ba1d-e15f163e8914\",\n                \"name\": \"Bruen-Dickens\",\n                \"cuisine_type\": \"nulla\",\n                \"address\": \"43340 Swift Mills Suite 490\\nJacobsmouth, MT 03031-3059\",\n                \"contact\": {\n                    \"email\": \"oturcotte@example.com\",\n                    \"phone\": \"757.917.9962\"\n                },\n                \"average_reviews\": 1,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"26d1a52e-074f-4b02-bed8-51100437e2ed\",\n                \"name\": \"Upton-DuBuque\",\n                \"cuisine_type\": \"occaecati\",\n                \"address\": \"787 Ebony Trace\\nSouth Katherynside, SD 10270\",\n                \"contact\": {\n                    \"email\": \"schmeler.velda@example.com\",\n                    \"phone\": \"1-712-698-2117\"\n                },\n                \"average_reviews\": 3.5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"a72fa2e9-4331-487e-8131-0e2abc1966d8\",\n                \"name\": \"Harvey, Hills and Beatty\",\n                \"cuisine_type\": \"omnis\",\n                \"address\": \"45774 Torphy Terrace\\nJaysonfort, CT 09287-4283\",\n                \"contact\": {\n                    \"email\": \"heidenreich.reed@example.net\",\n                    \"phone\": \"984.597.7512\"\n                },\n                \"average_reviews\": 4,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"56200bac-e66d-49a3-a57a-0fe1a347e061\",\n                \"name\": \"Carroll PLC\",\n                \"cuisine_type\": \"sed\",\n                \"address\": \"7317 Cummerata Park\\nLake Boris, WI 67081\",\n                \"contact\": {\n                    \"email\": \"prohaska.tanya@example.org\",\n                    \"phone\": \"+1-424-733-2176\"\n                },\n                \"average_reviews\": 5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"0d995f52-a8f0-40f6-9728-396cb9f116cd\",\n                \"name\": \"Schaefer, Blanda and Johnson\",\n                \"cuisine_type\": \"labore\",\n                \"address\": \"194 Leta Summit Suite 602\\nJohnsonfurt, VT 15608-3467\",\n                \"contact\": {\n                    \"email\": \"mallory.jaskolski@example.com\",\n                    \"phone\": \"+1-279-315-7657\"\n                },\n                \"average_reviews\": 4.5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"fe5aab65-e335-4ce9-ba02-616d7514d508\",\n                \"name\": \"Becker PLC\",\n                \"cuisine_type\": \"aut\",\n                \"address\": \"573 Francis Terrace Suite 697\\nErnserchester, WY 25364-4772\",\n                \"contact\": {\n                    \"email\": \"lubowitz.kitty@example.org\",\n                    \"phone\": \"803-731-7506\"\n                },\n                \"average_reviews\": 3,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"2c96c8a3-d2e6-4a02-8f57-8e7ffb5ccf22\",\n                \"name\": \"Baumbach, Rutherford and Nader\",\n                \"cuisine_type\": \"voluptas\",\n                \"address\": \"92738 Olaf Inlet\\nWest Laney, ND 77632-3095\",\n                \"contact\": {\n                    \"email\": \"kyle.baumbach@example.org\",\n                    \"phone\": \"1-414-299-8703\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            }\n        ]\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "restaurant-menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/restaurant-menu/:UuidRestaurant",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"restaurant-menu",
+								":UuidRestaurant"
+							],
+							"variable": [
+								{
+									"key": "UuidRestaurant",
+									"value": "10e8d4b0-2c3a-4f91-a808-a2aebed5882a",
+									"description": "string"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "restaurant-menu",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/restaurant-menu/:UuidRestaurant",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"restaurant-menu",
+										":UuidRestaurant"
+									],
+									"variable": [
+										{
+											"key": "UuidRestaurant",
+											"value": "10e8d4b0-2c3a-4f91-a808-a2aebed5882a",
+											"description": "string"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:13:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:13:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"restaurant\": {\n            \"name\": \"paino\",\n            \"cuisine_type\": \"east\",\n            \"address\": \"homs-hamra\",\n            \"contact\": {\n                \"email\": \"piano@gamil.com\",\n                \"phone\": \"0966135822\"\n            },\n            \"average_reviews\": 2.6666666666666665,\n            \"menus\": [\n                {\n                    \"uuid\": \"2332a963-be32-4804-9cf4-2a072167798c\",\n                    \"price\": 12000,\n                    \"item\": {\n                        \"name-item\": \"crispy\",\n                        \"desc\": \"Contains shish and sauce\",\n                        \"attachment\": \"Tomato Sauce\",\n                        \"type\": \"sandwish\"\n                    }\n                },\n                {\n                    \"uuid\": \"87bbdacb-b53c-4f34-af98-b722b5d27e45\",\n                    \"price\": 15.92,\n                    \"item\": {\n                        \"name-item\": \"ratione\",\n                        \"desc\": \"Possimus sint optio sed voluptatem. Ut dolores quo tempore doloribus tenetur eum. Pariatur non ipsum ut ipsum qui assumenda voluptas et.\",\n                        \"attachment\": \"Potatoes\",\n                        \"type\": \"est\"\n                    }\n                }\n            ]\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "restaurant-menu",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/restaurant-menu/:UuidRestaurant",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"restaurant-menu",
+										":UuidRestaurant"
+									],
+									"variable": [
+										{
+											"key": "UuidRestaurant",
+											"value": "10e8d4b0-2c3a-4f91-a808-a2aebed5882",
+											"description": "string"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:15:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:15:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"status\": false,\n    \"error\": \"Restaurant not found\",\n    \"statusCode\": 404\n}"
+						}
+					]
+				},
+				{
+					"name": "search-restaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/search?address=hom",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "cuisineType",
+									"value": "east",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "hom"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search-restaurant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/search?cuisineType=east&address=homs-hamra",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"search"
+									],
+									"query": [
+										{
+											"key": "cuisineType",
+											"value": "east"
+										},
+										{
+											"key": "address",
+											"value": "homs-hamra"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:20:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:20:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"restaurant\": [\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5882a\",\n                \"name\": \"paino\",\n                \"cuisine_type\": \"east\",\n                \"address\": \"homs-hamra\",\n                \"contact\": {\n                    \"email\": \"piano@gamil.com\",\n                    \"phone\": \"0966135822\"\n                },\n                \"average_reviews\": 2.6666666666666665,\n                \"created_at\": \"2023-08-26 13:28:15\",\n                \"updated_at\": \"2023-08-26 13:28:15\"\n            }\n        ]\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "search-restaurant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/search?cuisineType=east&address=homs-hamra",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"search"
+									],
+									"query": [
+										{
+											"key": "cuisineType",
+											"value": "east"
+										},
+										{
+											"key": "address",
+											"value": "homs-hamra"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:21:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:21:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"restaurant\": [\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5882a\",\n                \"name\": \"paino\",\n                \"cuisine_type\": \"east\",\n                \"address\": \"homs-hamra\",\n                \"contact\": {\n                    \"email\": \"piano@gamil.com\",\n                    \"phone\": \"0966135822\"\n                },\n                \"average_reviews\": 2.6666666666666665,\n                \"created_at\": \"2023-08-26 13:28:15\",\n                \"updated_at\": \"2023-08-26 13:28:15\"\n            }\n        ]\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "search-restaurant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/search",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"search"
+									],
+									"query": [
+										{
+											"key": "cuisineType",
+											"value": "east",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "homs-hamra",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:21:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:21:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"restaurant\": [\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5882a\",\n                \"name\": \"paino\",\n                \"cuisine_type\": \"east\",\n                \"address\": \"homs-hamra\",\n                \"contact\": {\n                    \"email\": \"piano@gamil.com\",\n                    \"phone\": \"0966135822\"\n                },\n                \"average_reviews\": 2.6666666666666665,\n                \"created_at\": \"2023-08-26 13:28:15\",\n                \"updated_at\": \"2023-08-26 13:28:15\"\n            },\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5884n\",\n                \"name\": \"Bordo\",\n                \"cuisine_type\": \"west\",\n                \"address\": \"homs-alhdara\",\n                \"contact\": {\n                    \"email\": \"piano@gamil.com\",\n                    \"phone\": \"0966135822\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 13:28:15\",\n                \"updated_at\": \"2023-08-26 13:28:15\"\n            },\n            {\n                \"uuid\": \"10e8d4b0-2c3a-4f91-a808-a2aebed5881d\",\n                \"name\": \"Jacobs Inc\",\n                \"cuisine_type\": \"veritatis\",\n                \"address\": \"977 Hoeger Ville Suite 355\\nNew Jamesonstad, CO 30185\",\n                \"contact\": {\n                    \"email\": \"ritchie.arjun@example.org\",\n                    \"phone\": \"+1.515.600.7768\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"cb8d5a69-41e3-42ca-b879-ae8a18efef41\",\n                \"name\": \"Morissette Inc\",\n                \"cuisine_type\": \"dolor\",\n                \"address\": \"8277 Thompson Dam Suite 403\\nEast Ezraberg, NJ 30234-8297\",\n                \"contact\": {\n                    \"email\": \"quigley.lester@example.org\",\n                    \"phone\": \"(863) 569-1723\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"3fc27edb-a504-432f-85a8-2e13fd40a29a\",\n                \"name\": \"Schumm, Oberbrunner and Gibson\",\n                \"cuisine_type\": \"ipsam\",\n                \"address\": \"6500 Avis Loop Apt. 307\\nLake Etha, UT 24042\",\n                \"contact\": {\n                    \"email\": \"ledner.carissa@example.org\",\n                    \"phone\": \"+1-440-928-6552\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"5ea67e74-9e22-48ac-aa5e-9e6e32cea61f\",\n                \"name\": \"Von LLC\",\n                \"cuisine_type\": \"ut\",\n                \"address\": \"6502 Minerva Park Suite 525\\nWest Dawsonborough, OK 67435-7663\",\n                \"contact\": {\n                    \"email\": \"dprice@example.com\",\n                    \"phone\": \"1-458-697-1426\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"f726ad56-6b5e-480a-ba66-47fe49525fb0\",\n                \"name\": \"Sporer-Runolfsson\",\n                \"cuisine_type\": \"quia\",\n                \"address\": \"449 Lonzo Island\\nRoscoemouth, IL 68754\",\n                \"contact\": {\n                    \"email\": \"kallie.shanahan@example.com\",\n                    \"phone\": \"864.817.3862\"\n                },\n                \"average_reviews\": 4,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"59827eaf-8e6b-4707-a784-1b12825df45e\",\n                \"name\": \"Conn, Rogahn and Schmidt\",\n                \"cuisine_type\": \"dolorum\",\n                \"address\": \"93637 Yvette Streets Apt. 203\\nAufderharfort, WA 24390-0231\",\n                \"contact\": {\n                    \"email\": \"danyka.dietrich@example.net\",\n                    \"phone\": \"(463) 227-8042\"\n                },\n                \"average_reviews\": 3,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"46810f17-ed0b-4c84-bda2-2dd259bf6131\",\n                \"name\": \"Runolfsson, Bode and Vandervort\",\n                \"cuisine_type\": \"at\",\n                \"address\": \"309 Ortiz Bypass\\nKayleighfort, OR 33537-9321\",\n                \"contact\": {\n                    \"email\": \"bruen.krystel@example.net\",\n                    \"phone\": \"+1.959.929.0101\"\n                },\n                \"average_reviews\": 3,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"65c646ca-38a2-4d62-b9d4-a25ee179fb80\",\n                \"name\": \"Stracke Group\",\n                \"cuisine_type\": \"quo\",\n                \"address\": \"880 Oran Summit\\nLonniehaven, WY 29959\",\n                \"contact\": {\n                    \"email\": \"larue.stehr@example.org\",\n                    \"phone\": \"+1-551-409-3001\"\n                },\n                \"average_reviews\": 2.5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"1c3bd13a-b4fe-4fcc-9a80-df09754cea2f\",\n                \"name\": \"Satterfield and Sons\",\n                \"cuisine_type\": \"dolore\",\n                \"address\": \"297 Laurence Drive\\nEast Lydia, VT 60968\",\n                \"contact\": {\n                    \"email\": \"ahudson@example.org\",\n                    \"phone\": \"+1 (662) 919-4552\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"3ca8a464-ca00-48bc-b4d2-8ec8c6f124dc\",\n                \"name\": \"Schiller, Borer and Kunze\",\n                \"cuisine_type\": \"iste\",\n                \"address\": \"884 White Locks Apt. 837\\nWest Candelario, NY 43359-7412\",\n                \"contact\": {\n                    \"email\": \"fabiola.weissnat@example.com\",\n                    \"phone\": \"1-260-493-4743\"\n                },\n                \"average_reviews\": 1,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"19651d84-87cf-4694-83db-155363fdc7a3\",\n                \"name\": \"Welch, Moen and Wintheiser\",\n                \"cuisine_type\": \"fuga\",\n                \"address\": \"53891 Paucek Trace\\nHammesmouth, IL 87673\",\n                \"contact\": {\n                    \"email\": \"tdavis@example.com\",\n                    \"phone\": \"302.218.7767\"\n                },\n                \"average_reviews\": 4,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"c179e6d1-110b-4cb1-81f1-38c01cb216b1\",\n                \"name\": \"Sipes-Stark\",\n                \"cuisine_type\": \"et\",\n                \"address\": \"7221 Zieme Ridges\\nPort Sonya, CA 41395\",\n                \"contact\": {\n                    \"email\": \"lwolf@example.net\",\n                    \"phone\": \"1-929-318-6242\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"28491183-6ab0-4429-810b-c6249e935fba\",\n                \"name\": \"Anderson Ltd\",\n                \"cuisine_type\": \"repellat\",\n                \"address\": \"3796 Connor Springs\\nWelchside, TN 43654-6925\",\n                \"contact\": {\n                    \"email\": \"wanda94@example.com\",\n                    \"phone\": \"(909) 376-4145\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"96385af7-5ad7-45b3-ba1d-e15f163e8914\",\n                \"name\": \"Bruen-Dickens\",\n                \"cuisine_type\": \"nulla\",\n                \"address\": \"43340 Swift Mills Suite 490\\nJacobsmouth, MT 03031-3059\",\n                \"contact\": {\n                    \"email\": \"oturcotte@example.com\",\n                    \"phone\": \"757.917.9962\"\n                },\n                \"average_reviews\": 1,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"26d1a52e-074f-4b02-bed8-51100437e2ed\",\n                \"name\": \"Upton-DuBuque\",\n                \"cuisine_type\": \"occaecati\",\n                \"address\": \"787 Ebony Trace\\nSouth Katherynside, SD 10270\",\n                \"contact\": {\n                    \"email\": \"schmeler.velda@example.com\",\n                    \"phone\": \"1-712-698-2117\"\n                },\n                \"average_reviews\": 3.5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"a72fa2e9-4331-487e-8131-0e2abc1966d8\",\n                \"name\": \"Harvey, Hills and Beatty\",\n                \"cuisine_type\": \"omnis\",\n                \"address\": \"45774 Torphy Terrace\\nJaysonfort, CT 09287-4283\",\n                \"contact\": {\n                    \"email\": \"heidenreich.reed@example.net\",\n                    \"phone\": \"984.597.7512\"\n                },\n                \"average_reviews\": 4,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"56200bac-e66d-49a3-a57a-0fe1a347e061\",\n                \"name\": \"Carroll PLC\",\n                \"cuisine_type\": \"sed\",\n                \"address\": \"7317 Cummerata Park\\nLake Boris, WI 67081\",\n                \"contact\": {\n                    \"email\": \"prohaska.tanya@example.org\",\n                    \"phone\": \"+1-424-733-2176\"\n                },\n                \"average_reviews\": 5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"0d995f52-a8f0-40f6-9728-396cb9f116cd\",\n                \"name\": \"Schaefer, Blanda and Johnson\",\n                \"cuisine_type\": \"labore\",\n                \"address\": \"194 Leta Summit Suite 602\\nJohnsonfurt, VT 15608-3467\",\n                \"contact\": {\n                    \"email\": \"mallory.jaskolski@example.com\",\n                    \"phone\": \"+1-279-315-7657\"\n                },\n                \"average_reviews\": 4.5,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"fe5aab65-e335-4ce9-ba02-616d7514d508\",\n                \"name\": \"Becker PLC\",\n                \"cuisine_type\": \"aut\",\n                \"address\": \"573 Francis Terrace Suite 697\\nErnserchester, WY 25364-4772\",\n                \"contact\": {\n                    \"email\": \"lubowitz.kitty@example.org\",\n                    \"phone\": \"803-731-7506\"\n                },\n                \"average_reviews\": 3,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            },\n            {\n                \"uuid\": \"2c96c8a3-d2e6-4a02-8f57-8e7ffb5ccf22\",\n                \"name\": \"Baumbach, Rutherford and Nader\",\n                \"cuisine_type\": \"voluptas\",\n                \"address\": \"92738 Olaf Inlet\\nWest Laney, ND 77632-3095\",\n                \"contact\": {\n                    \"email\": \"kyle.baumbach@example.org\",\n                    \"phone\": \"1-414-299-8703\"\n                },\n                \"average_reviews\": 0,\n                \"created_at\": \"2023-08-26 10:45:41\",\n                \"updated_at\": \"2023-08-26 10:45:41\"\n            }\n        ]\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "search-restaurant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/search?address=hom",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"search"
+									],
+									"query": [
+										{
+											"key": "cuisineType",
+											"value": "east",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "hom"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:22:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:22:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"No restaurants found\"\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "add-all-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "menu_items[0][menu_uuid]",
+									"value": "2332a963-be92-4804-9cf4-2a072167735c",
+									"description": "'required', 'string', 'uuid'",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[0][quantity]",
+									"value": "5",
+									"description": "'required', 'integer', 'min:1'",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][menu_uuid]",
+									"value": "2332a963-be32-4804-9cf4-2a072167777c",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[1][quantity]",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path}}/add-all-order",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"add-all-order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add-all-order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "menu_items[0][menu_uuid]",
+											"value": "2332a963-be92-4804-9cf4-2a072167735c",
+											"description": "'required', 'string', 'uuid'",
+											"type": "text"
+										},
+										{
+											"key": "menu_items[0][quantity]",
+											"value": "5",
+											"description": "'required', 'integer', 'min:1'",
+											"type": "text"
+										},
+										{
+											"key": "menu_items[1][menu_uuid]",
+											"value": "2332a963-be32-4804-9cf4-2a072167777c",
+											"type": "text"
+										},
+										{
+											"key": "menu_items[1][quantity]",
+											"value": "8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/add-all-order",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"add-all-order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:27:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:27:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"order\": {\n            \"uuid\": \"86612279-86fc-4164-b7f0-5d721fb489b9\",\n            \"status\": \"Not Received\",\n            \"total\": 725000,\n            \"items\": [\n                {\n                    \"quantity\": 5,\n                    \"menu\": {\n                        \"uuid\": \"2332a963-be92-4804-9cf4-2a072167735c\",\n                        \"price\": 125000,\n                        \"item\": {\n                            \"name-item\": \"shish\",\n                            \"desc\": \"Contains shish and sauce\",\n                            \"attachment\": \"cream\",\n                            \"type\": \"meal\"\n                        }\n                    }\n                },\n                {\n                    \"quantity\": 8,\n                    \"menu\": {\n                        \"uuid\": \"2332a963-be32-4804-9cf4-2a072167777c\",\n                        \"price\": 12500,\n                        \"item\": {\n                            \"name-item\": \"crispy\",\n                            \"desc\": \"Contains shish and sauce\",\n                            \"attachment\": \"Tomato Sauce\",\n                            \"type\": \"sandwish\"\n                        }\n                    }\n                }\n            ],\n            \"created_at\": \"2023-08-26 11:27:19\",\n            \"updated_at\": \"2023-08-26 11:27:19\"\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "add-all-order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "menu_items[0][menu_uuid]",
+											"value": "2332a963-be92-4804-9cf4-2a072167735c",
+											"description": "'required', 'string', 'uuid'",
+											"type": "text"
+										},
+										{
+											"key": "menu_items[0][quantity]",
+											"value": "5",
+											"description": "'required', 'integer', 'min:1'",
+											"type": "text"
+										},
+										{
+											"key": "menu_items[1][menu_uuid]",
+											"value": "2332a963-be32-4804-9cf4-2a072167777c",
+											"type": "text"
+										},
+										{
+											"key": "menu_items[1][quantity]",
+											"value": "8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/add-all-order",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"add-all-order"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:27:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:27:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"status\": false,\n    \"error\": \"Unauthorize\",\n    \"statusCode\": 401\n}"
+						}
+					]
+				},
+				{
+					"name": "update-all-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "menu_items[0][menu_uuid]",
+									"value": "e7939929-45fd-4f0f-8025-5777dc0f13e7",
+									"type": "text"
+								},
+								{
+									"key": "menu_items[0][quantity]",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "UuidOrder",
+									"value": "bd6bc126-3ff0-4fff-9128-67eb96d1ae8b",
+									"description": "string",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path}}/orders-all-update",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"orders-all-update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update-all-order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "menu_items[0][menu_uuid]",
+											"value": "2332a963-be32-4804-9cf4-2a072167777c",
+											"type": "text"
+										},
+										{
+											"key": "menu_items[0][quantity]",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "UuidOrder",
+											"value": "86612279-86fc-4164-b7f0-5d721fb489b9",
+											"description": "string",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/orders-all-update",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"orders-all-update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:32:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:32:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"order\": {\n            \"uuid\": \"86612279-86fc-4164-b7f0-5d721fb489b9\",\n            \"status\": \"Not Received\",\n            \"total\": 125000,\n            \"items\": [\n                {\n                    \"quantity\": 10,\n                    \"menu\": {\n                        \"uuid\": \"2332a963-be32-4804-9cf4-2a072167777c\",\n                        \"price\": 12500,\n                        \"item\": {\n                            \"name-item\": \"crispy\",\n                            \"desc\": \"Contains shish and sauce\",\n                            \"attachment\": \"Tomato Sauce\",\n                            \"type\": \"sandwish\"\n                        }\n                    }\n                }\n            ],\n            \"created_at\": \"2023-08-26 11:27:19\",\n            \"updated_at\": \"2023-08-26 11:27:19\"\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_uuid",
+									"value": "62c5e42e-3173-4cb3-9834-6bf388e7b59d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path}}/orders/delete",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"orders",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete-order",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_uuid",
+											"value": "62c5e42e-3173-4cb3-9834-6bf388e7b59d",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/orders/delete",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"orders",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:51:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:51:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [],\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "deliver-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "UuidOrder",
+									"value": "eb2eb855-d095-4d80-86a1-3f118642cb76",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path}}/orders-deliver",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"orders-deliver"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deliver-order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "UuidOrder",
+											"value": "eb2eb855-d095-4d80-86a1-3f118642cb76",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/orders-deliver",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"orders-deliver"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:58:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:58:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"order\": {\n            \"uuid\": \"eb2eb855-d095-4d80-86a1-3f118642cb76\",\n            \"status\": \"Received\",\n            \"total\": 96000,\n            \"items\": [\n                {\n                    \"quantity\": 8,\n                    \"menu\": {\n                        \"uuid\": \"2332a963-be32-4804-9cf4-2a072167798c\",\n                        \"price\": 12000,\n                        \"item\": {\n                            \"name-item\": \"crispy\",\n                            \"desc\": \"Contains shish and sauce\",\n                            \"attachment\": \"Tomato Sauce\",\n                            \"type\": \"sandwish\"\n                        }\n                    }\n                }\n            ],\n            \"created_at\": \"2023-08-26 11:39:40\",\n            \"updated_at\": \"2023-08-26 11:58:20\"\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "add-one-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "menu_uuid",
+									"value": "2332a963-be32-4804-9cf4-2a072167798c",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path}}/add-one-order",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"add-one-order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add-one-order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "menu_uuid",
+											"value": "2332a963-be32-4804-9cf4-2a072167798c",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/add-one-order",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"add-one-order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:39:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:39:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"order\": {\n            \"uuid\": \"eb2eb855-d095-4d80-86a1-3f118642cb76\",\n            \"status\": \"Not Received\",\n            \"total\": 120000,\n            \"items\": [\n                {\n                    \"quantity\": 10,\n                    \"menu\": {\n                        \"uuid\": \"2332a963-be32-4804-9cf4-2a072167798c\",\n                        \"price\": 12000,\n                        \"item\": {\n                            \"name-item\": \"crispy\",\n                            \"desc\": \"Contains shish and sauce\",\n                            \"attachment\": \"Tomato Sauce\",\n                            \"type\": \"sandwish\"\n                        }\n                    }\n                }\n            ],\n            \"created_at\": \"2023-08-26 11:39:40\",\n            \"updated_at\": \"2023-08-26 11:39:40\"\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "update-one-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "menu_uuid",
+									"value": "2332a963-be32-4804-9cf4-2a072167798c",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "UuidOrder",
+									"value": "eb2eb855-d095-4d80-86a1-3f118642cb76",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path}}/orders-one-update",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"orders-one-update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update-one-order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "menu_uuid",
+											"value": "2332a963-be32-4804-9cf4-2a072167798c",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "UuidOrder",
+											"value": "eb2eb855-d095-4d80-86a1-3f118642cb76",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/orders-one-update",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"orders-one-update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:48:48 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 11:48:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"order\": {\n            \"uuid\": \"eb2eb855-d095-4d80-86a1-3f118642cb76\",\n            \"status\": \"Not Received\",\n            \"total\": 96000,\n            \"items\": [\n                {\n                    \"quantity\": 8,\n                    \"menu\": {\n                        \"uuid\": \"2332a963-be32-4804-9cf4-2a072167798c\",\n                        \"price\": 12000,\n                        \"item\": {\n                            \"name-item\": \"crispy\",\n                            \"desc\": \"Contains shish and sauce\",\n                            \"attachment\": \"Tomato Sauce\",\n                            \"type\": \"sandwish\"\n                        }\n                    }\n                }\n            ],\n            \"created_at\": \"2023-08-26 11:39:40\",\n            \"updated_at\": \"2023-08-26 11:39:40\"\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "add-review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|laravel_sanctum_AzMPyXj2zbegW9hMbNaWTM1PETvt1WpFV7gWDsVj77033730",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "restaurant_uuid",
+									"value": "10e8d4b0-2c3a-4f91-a808-a2aebed5882a",
+									"description": "'required', 'string', 'exists:restaurants,uuid'",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "ee",
+									"description": "'required', 'string'",
+									"type": "text"
+								},
+								{
+									"key": "star",
+									"value": "5",
+									"description": "required', 'integer','min:0','max:5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path}}/review-add",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"review-add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add-review",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "restaurant_uuid",
+											"value": "10e8d4b0-2c3a-4f91-a808-a2aebed5882a",
+											"description": "'required', 'string', 'exists:restaurants,uuid'",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "ee",
+											"description": "'required', 'string'",
+											"type": "text"
+										},
+										{
+											"key": "star",
+											"value": "5",
+											"description": "required', 'integer','min:0','max:5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/review-add",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"review-add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 12:03:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 12:03:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"review\": {\n            \"uuid\": \"9851c75b-b140-4e72-8d6d-6920e3d6f4bc\",\n            \"star\": 5,\n            \"comment\": \"ee\",\n            \"restaurant_name\": \"paino\",\n            \"user_name\": \"reem\",\n            \"created_at\": \"2023-08-26 12:03:50\",\n            \"updated_at\": \"2023-08-26 12:03:50\"\n        }\n    },\n    \"status\": true,\n    \"error\": null,\n    \"statusCode\": 200\n}"
+						},
+						{
+							"name": "add-review",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "restaurant_uuid",
+											"value": "10e8d4b0-2c3a-4f91-a808-a2aebed5882a",
+											"description": "'required', 'string', 'exists:restaurants,uuid'",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "ee",
+											"description": "'required', 'string'",
+											"type": "text"
+										},
+										{
+											"key": "star",
+											"value": "6",
+											"description": "required', 'integer','min:0','max:5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{path}}/review-add",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"review-add"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 12:04:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Aug 2023 12:04:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"status\": false,\n    \"error\": \"The star must not be greater than 5.\",\n    \"statusCode\": 400\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "path",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
